@@ -9,14 +9,14 @@ let multiply = (a, b=1) => {return a*b};
 //Zad. 3. 
 
 const average = (...args) => {
-  const result = args.reduce( (x, y) => {return x + y} );
+  const result = args.reduce( (x, y) => {x + y} );
   return result/args.length;
 };
 
 
 //Zad. 4. 
 const grades = [1, 5, 5, 5, 4, 3, 3, 2, 1];
-const avaerage= (((...args)=> args.reduce((sum, next) => sum + next))(...grades)) / grades.length;
+const avaerage= (((...args)=> args.reduce((sum, next) => sum + next))(...args)) / grades.length;
 
 
 //Zad. 5. Destrukturyzacja w celu wyciągnięcia firstname i lastname.OKOK
