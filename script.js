@@ -4,9 +4,7 @@ const sayHello = (hello = `Hello `, world = "World") =>
 
 //Zad.2.
 
-let multiply = (a, b = 1) => {
-	return a * b;
-};
+const multiply = (a, b = 1) => a * b;
 
 //Zad. 3.
 
@@ -16,10 +14,13 @@ const average = (...args) => {
 	});
 	return result / args.length;
 };
+//Inne rozwiązanie
+const average = (...args) => args.reduce((x, y) => x + y) / args.length;
 
 //Zad. 4.
 const grades = [1, 5, 5, 5, 4, 3, 3, 2, 1];
-const average = (...args) => args.reduce((sum, next) => sum + next)/args.length; 
+const average = (...grades) =>
+	grades.reduce((sum, next) => sum + next) / grades.length;
 
 //Zad. 5. Destrukturyzacja w celu wyciągnięcia firstname i lastname.OKOK
 
